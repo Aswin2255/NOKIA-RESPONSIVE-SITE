@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">click me</button>
+    <form id="form">
+       
+        <input name="fname" type="text">
+        <input name="sname" type="text">
+        <input name="emailadd" type="text">
+        <input name="pass" type="text">
+        <label>Gender</label>
+        <br>
+       
+        <label>male</label>
+        <input name="female" type="radio">
+        <label>female</label>
+        <input name="female" type="radio">
+        <label>birthday</label>
+        <label>day</label>
+        <select name="day">
+            <option value="">1</option>
+            <option value="1">2</option>
+ 
+        </select>
+        <label>month</label>
+        <select>
+            <option>jan</option1>
+            <option>feb</option>
+        </select>
+        <label>year</label>
+        <select>
+            <option>2000</option>
+            <option>2000</option>
+            <option>2000</option>
+        </select>
+    </form>
+    <div id="box" style="width: 500px;height:250px;background-color:green"></div>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>    
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.js"></script>
+    <script src="jq.js"></script>
+ <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                alert("button clicked")
+                $('#box').fadeToggle(300)
+            })
+            $("#btn").mouseenter(function(){
+                $(this).css({"background":"red"})
+            })
+            $("#b").blur(function(){
+               var t =  $(this).val()
+               if(t.length<4){
+                $('#l').show()
+               }
+               else(
+                $('#l').hide()
+               )
+            })
+        })
+    </script>
+</body>
+</html>
+--------------------------------\
+  <!-- Contact Start -->
+  <div class="container-fluid py-5" id="contact">
+    <div class="container">
+        <div class="position-relative d-flex align-items-center justify-content-center">
+            <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Contact</h1>
+            <h1 class="position-absolute text-uppercase text-primary">Contact Me</h1>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="contact-form text-center">
+                    <div id="success"></div>
+                    <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                        <div class="form-row">
+                            <div class="control-group col-sm-6">
+                                <input type="text" class="form-control p-4" id="name" placeholder="Your Name"
+                                required="required" data-validation-required-message="Please enter your name" />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="control-group col-sm-6">
+                                <input type="email" class="form-control p-4" id="email" placeholder="Your Email"
+                                    required="required" data-validation-required-message="Please enter your email" />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <input type="text" class="form-control p-4" id="subject" placeholder="Subject"
+                                required="required" data-validation-required-message="Please enter a subject" />
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="control-group">
+                            <textarea class="form-control py-3 px-4" rows="5" id="message" placeholder="Message"
+                                required= <div class="container-fluid py-5" id="contact">
+                                    <div class="container">
+                                        <div class="position-relative d-flex align-items-center justify-content-center">
+                                            <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Contact</h1>
+                                            <h1 class="position-absolute text-uppercase text-primary">Contact Me</h1>
+                                        </div>
+                                        <div class="row justify-content-center">
+                                            <div class="col-lg-8">
+                                                <div class="contact-form text-center">
+                                                    <div id="success"></div>
+                                                    <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                                                        <div class="form-row">
+                                                            <div class="control-group col-sm-6">
+                                                                <input type="text" class="form-control p-4" id="name" placeholder="Your Name"
+                                                                required="required" data-validation-required-message="Please enter your name" />
+                                                                <p class="help-block text-danger"></p>
+                                                            </div>
+                                                            <div class="control-group col-sm-6">
+                                                                <input type="email" class="form-control p-4" id="email" placeholder="Your Email"
+                                                                    required="required" data-validation-required-message="Please enter your email" />
+                                                                <p class="help-block text-danger"></p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="control-group">
+                                                            <input type="text" class="form-control p-4" id="subject" placeholder="Subject"
+                                                                required="required" data-validation-required-message="Please enter a subject" />
+                                                            <p class="help-block text-danger"></p>
+                                                        </div>
+                                                        <div class="control-group">
+                                                            <textarea class="form-control py-3 px-4" rows="5" id="message" placeholder="Message"
+                                                                required="required"
+                                                                data-validation-required-message="Please enter your message"></textarea>
+                                                            <p class="help-block text-danger"></p>
+                                                        </div>
+                                                        <div>
+                                                            <button class="btn btn-outline-primary" type="submit" id="sendMessageButton">Send
+                                                                Message</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>"required"
+                                data-validation-required-message="Please enter your message"></textarea>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div>
+                            <button class="btn btn-outline-primary" type="submit" id="sendMessageButton">Send
+                                Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Contact End -->
+<script src="mail/jqBootstrapValidation.min.js"></script>
